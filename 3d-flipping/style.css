@@ -5,10 +5,10 @@ body{
 .box
 {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 300px !important;
-    height: 250px !important;
+    top: 0px;
+    left: 0px;
+    width: 250px !important;
+    height: 208px !important;
     transform-style: preserve-3d;
     animation: rotate;
     animation-duration: 10s;
@@ -18,17 +18,13 @@ body{
 
 @keyframes rotate {
     from{
-        transform: perspective(9999px) rotateY(0deg);
+        transform: perspective(500px) rotateY(0deg);
     }
     to {
-        transform: perspective(9999px) rotateY(360deg);
+        transform: perspective(500px) rotateY(360deg);
     }
 }
 
-.box:hover
-{
-    transform: perspective(500px) rotateY(180deg);
-}
 .box::before
 {
     content: '';
@@ -46,7 +42,7 @@ body{
     content: '';
     position: absolute;
     top: 0;
-    left: 300px;
+    left: 250px;
     width: 50px;
     height: 100%;
     background: #34A56F;

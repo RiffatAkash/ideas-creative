@@ -1,0 +1,87 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(-100%,-100%); */
+    width: 300px;
+    height: 250px;
+    /* background: #ccc; */
+    display: flex;
+    overflow: hidden;
+}
+ul li{
+    list-style: none;
+    width: 25%;
+    background: url(images/bg1.jpg);
+    background-size: cover;
+    height: 100%;
+    transform: .5s;
+    /* animation: fold;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear */
+}
+/* @keyframes fold{
+    from{
+
+    }
+    to{
+        li:nth-child(odd){
+            sk
+        }
+    }
+} */
+ul li:nth-child(odd){
+    animation: image_moving 2s linear 0s infinite alternate;
+}
+ul li:nth-child(even){
+    animation: image_moving2 2s linear 0s infinite alternate;
+}
+@keyframes image_moving {
+    from{
+        transform: skewY(0deg);
+    }    
+    to{
+        transform: skewY(15deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+    }
+}
+@keyframes image_moving2 {
+    from{
+        transform: skewY(0deg);
+    }    
+    to{
+        transform: skewY(-15deg);
+        box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+    }
+}
+/* ul:hover li:nth-child(odd){
+    transform: skewY(15deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+}
+ul:hover li:nth-child(even){
+    transform: skewY(-15deg);
+    box-shadow: inset 20px 0 50px rgba(0, 0, 0, .5);
+} */
+ul li:nth-child(1)
+{
+    background-position: 0;
+}
+ul li:nth-child(2)
+{
+    background-position: -75px;
+}
+ul li:nth-child(3)
+{
+    background-position: calc(-75px * 2);
+}
+ul li:nth-child(4)
+{
+    background-position: calc(-75px * 3);
+}
